@@ -1,37 +1,43 @@
 const githubForm = document.getElementById("github-form");
 const nameInput = document.getElementById("githubname");
 const clearLastUsers = document.getElementById("clear-last-users");
-const lastUsers = document.getElementById("last-users")
+const lastUsers = document.getElementById("last-users");
 const github = new Github();
 
 eventListeners();
 
 function eventListeners() {
-      githubForm.addEventListener("submit",getData);
-      clearLastUsers.addEventListener("click",clearAllSearched);
-      document.addEventListener("DOMContentLoaded",getAllSearched);
+  githubForm.addEventListener("submit", getData);
+  clearLastUsers.addEventListener("click", clearAllSearched);
+  document.addEventListener("DOMContentLoaded", getAllSearched);
 }
 
 //Get data
 
 function getData(e) {
-      let username = nameInput.value.trim();
-      if(username === ''){
-            alert("Username will not be empty!")
-      }else{
-            github.getGithubData(username)
-            .then(response => console.log(response))
-            .catch(err => console.log(err))
-      }
-      e.preventDefault();      
+  let username = nameInput.value.trim();
+
+  if (username === "") {
+    alert("Username will not be empty!");
+  } else {
+    github
+      .getGithubData(username)
+      .then((response) => {
+        if (response.user.message === "Not Found") {
+          console.log("Error");
+        } else {
+            for(let i=0;i<response.repo.length;i++){
+                  console.log(response.repo[i].name);
+            }
+        }
+      })
+      .catch((err) => console.log(err));
+  }
+  e.preventDefault();
 }
 
 //Clear all searched
-function clearAllSearched(){
-}
-
+function clearAllSearched() {}
 
 //Get All Searched from local storage
-function getAllSearched(){
-
-}
+function getAllSearched() {}
