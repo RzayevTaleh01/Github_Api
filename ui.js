@@ -91,18 +91,18 @@ class UI {
   }
 
   addSearchedUserToUI(username) {
-      let users = Storage.getSearchedUserFromStorage();
-      if (users.indexOf(username) === -1) {
+    let users = Storage.getSearchedUserFromStorage();
+    if (users.indexOf(username) === -1) {
       //  <li class="list-group-item">-----</li>
       let li = document.createElement("li");
       li.className = "list-group-item";
-      li.textContent=username;
+      li.textContent = username;
       this.lastUsers.appendChild(li);
     }
   }
 
-  clearAllSearchedFromUI(){
-    while(this.lastUsers.firstElementChild){
+  clearAllSearchedFromUI() {
+    while (this.lastUsers.firstElementChild) {
       this.lastUsers.firstElementChild.remove();
     }
   }

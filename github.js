@@ -5,20 +5,19 @@ class Github {
   async getGithubData(username) {
     //The value will be sent from nameInput
     const responseUser = await fetch(this.url + username);
-     // like 'users/RzayevTaleh01'
+    // like 'users/RzayevTaleh01'
 
-     const responseRepo = await fetch(this.url + username + "/repos")
-     // like 'url/users/RzayevTaleh01/repos'
+    const responseRepo = await fetch(this.url + username + "/repos");
+    // like 'url/users/RzayevTaleh01/repos'
 
-     //data will be added these variables
-     const userData = await responseUser.json();
-     const repoData = await responseRepo.json();
+    //data will be added these variables
+    const userData = await responseUser.json();
+    const repoData = await responseRepo.json();
 
-     //return like object
-     return{
-           user:userData,
-           repo:repoData
-     }
-
+    //return like object
+    return {
+      user: userData,
+      repo: repoData,
+    };
   }
 }
