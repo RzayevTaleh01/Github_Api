@@ -100,4 +100,10 @@ class UI {
       this.lastUsers.appendChild(li);
     }
   }
+
+  clearAllSearchedFromUI(){
+    while(this.lastUsers.firstElementChild){
+      this.lastUsers.firstElementChild.remove();
+    }
+  }
 }

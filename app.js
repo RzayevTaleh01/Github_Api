@@ -40,7 +40,11 @@ function getData(e) {
 }
 
 //Clear all searched
-function clearAllSearched() {}
+function clearAllSearched() {
+  Storage.clearAllSearchedUsersFromStorage();
+  ui.clearAllSearchedFromUI();
+
+}
 
 //Get All Searched from local storage
 function getAllSearched() {
