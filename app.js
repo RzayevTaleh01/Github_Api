@@ -25,22 +25,31 @@ function getData(e) {
       .getGithubData(username)
       .then((response) => {
         if (response.user.message === "Not Found") {
-          ui.showError("User is not found!")
+          ui.showError("User is not found!");
         } else {
-              ui.showUserInfo(response.user)
-              ui.showRepoInfo(response.repo)
+            ui.addSearchedUserToUI(username);
+            Storage.addSearchedUserToStorage(username)
+            ui.showUserInfo(response.user);
+            ui.showRepoInfo(response.repo);
         }
       })
       .catch((err) => ui.showError(err));
   }
   ui.clearInput();
   e.preventDefault();
-
 }
-
 
 //Clear all searched
 function clearAllSearched() {}
 
 //Get All Searched from local storage
-function getAllSearched() {}
+function getAllSearched() {
+  let users = Storage.getSearchedUserFromStorage();
+
+  let result = "";
+  users.forEach(user =>{
+    result +=`<li class="list-group-item">${user}</li>`
+  })
+
+  lastUsers.innerHTML = result;
+}

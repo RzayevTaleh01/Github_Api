@@ -56,7 +56,6 @@ class UI {
   }
   showRepoInfo(repos) {
     this.repoDiv.innerHTML = "";
-
     repos.forEach((repo) => {
       this.repoDiv.innerHTML += `
       <div class="mb-2 card-body">
@@ -74,10 +73,8 @@ class UI {
                       </button>
                   </div>
             </div>
-      </div> 
-          
-                   
-              `;
+      </div>
+      `;
     });
   }
 
@@ -90,6 +87,17 @@ class UI {
 
     setTimeout(() => {
       div.remove();
-    }, 3000);
+    }, 9000);
+  }
+
+  addSearchedUserToUI(username) {
+      let users = Storage.getSearchedUserFromStorage();
+      if (users.indexOf(username) === -1) {
+      //  <li class="list-group-item">-----</li>
+      let li = document.createElement("li");
+      li.className = "list-group-item";
+      li.textContent=username;
+      this.lastUsers.appendChild(li);
+    }
   }
 }
