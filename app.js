@@ -27,9 +27,7 @@ function getData(e) {
         if (response.user.message === "Not Found") {
           console.log("Error");
         } else {
-            for(let i=0;i<response.repo.length;i++){
-                  console.log(response.repo[i].name);
-            }
+              ui.showUserInfo(response.user)
         }
       })
       .catch((err) => console.log(err));
