@@ -15,7 +15,6 @@ function eventListeners() {
 }
 
 //Get data
-
 function getData(e) {
   let username = nameInput.value.trim();
 
