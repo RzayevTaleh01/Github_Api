@@ -4,4 +4,4 @@
 
 ## 🌎 Live Preview
 
-taleh-github-api.netlify.app
+https://taleh-github-api.netlify.app
