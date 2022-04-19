@@ -55,12 +55,11 @@ class UI {
   }
   showRepoInfo(repos) {
     this.repoDiv.innerHTML = "";
-    if(repos.length==0){
-      this.repoDiv.innerHTML = `<p class="empty-repo">${repos.login} doesn't have any public repositories yet.</p>`
-    }
-    else{
-    for(let i=0;i<3;i++){
-      this.repoDiv.innerHTML += ` <div class="repo-item">
+    if (repos.length == 0) {
+      this.repoDiv.innerHTML = `<p class="empty-repo">${repos.login} doesn't have any public repositories yet.</p>`;
+    } else {
+      for (let i = 0; i < 3; i++) {
+        this.repoDiv.innerHTML += ` <div class="repo-item">
       <div class="repo-head">
         <h1><a href="${repos[i].html_url}">${repos[i].name}</a></h1>
         <p>${repos[i].description}</p>
@@ -122,10 +121,10 @@ class UI {
         </ul>
       </div>
     </div>`;
-    };
-    console.log(repos.length);
+      }
+      console.log(repos.length);
+    }
   }
-}
 
   //write the error messages to ui
   showError(message) {
@@ -133,7 +132,7 @@ class UI {
     const p = document.createElement("p");
     div.className = "error-message";
     p.textContent = message;
-    div.appendChild(p)
+    div.appendChild(p);
     this.formArticle.appendChild(div);
     setTimeout(() => {
       div.remove();
@@ -141,8 +140,20 @@ class UI {
   }
 
   addSearchedUserToUI(username, x) {
+    //send username getGithubData function for username
+    //send (true) value getAllSearched function for x
     let users = Storage.getSearchedUserFromStorage();
     if (users.indexOf(username) === -1 || x == true) {
+      // <li>
+      //   <a class="user-link" href="#">
+      //     <p class="user-link">RzayevTaleh01</p>
+      //   </a>
+      //   <a href="#">
+      //     <ion-icon
+      //       name="close-outline"
+      //     ></ion-icon>
+      //   </a>
+      // </li>;
       let li = document.createElement("li");
       let a1 = document.createElement("a");
       a1.className = "user-link";

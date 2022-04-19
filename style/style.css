@@ -4,13 +4,16 @@
       box-sizing: border-box;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-a{
+
+a {
       text-decoration: none;
 }
+
 button {
       cursor: pointer;
       border: none;
 }
+
 ul {
       list-style: none;
 }
@@ -24,6 +27,9 @@ body {
       gap: 20px;
 }
 
+body h1{
+      margin-bottom: 20px;
+}
 .container {
       width: 80%;
       margin: auto;
@@ -80,7 +86,8 @@ main aside {
       border-radius: 5px;
 }
 
-main aside .info,.info {
+main aside .info,
+.info {
       width: 100%;
       text-align: center;
       background-color: #23272B;
@@ -93,15 +100,17 @@ main aside .info,.info {
 main .repos {
       width: 60%;
 }
-.error-message{
+
+.error-message {
       background-color: #F8D7DA;
-      color:#721c24;
+      color: #721c24;
       width: 100%;
       padding: 10px;
       margin-top: 20px;
       border-radius: 5px;
 }
-.empty-repo{
+
+.empty-repo {
       text-align: center;
       padding: 20px 0;
 }
@@ -110,13 +119,15 @@ main .repos {
 main .profile {
       width: 40%;
 }
-main .profile .p-1{
+
+main .profile .p-1 {
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
       gap: 10px;
 }
+
 .profile .p-1 .img {
       display: flex;
       justify-content: center;
@@ -126,39 +137,47 @@ main .profile .p-1{
       width: 60%;
       border-radius: 50%;
 }
-.profile .p-1 h1{
+
+.profile .p-1 h1 {
       font-size: 28px;
       font-weight: 500;
 }
-.profile .p-1>p{
+
+.profile .p-1>p {
       font-size: 20px;
       font-style: italic;
       margin-bottom: 20px;
 }
+
 .profile .p-1 .count {
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 30px;
 }
-.profile .p-1 .count div{
+
+.profile .p-1 .count div {
       display: flex;
       flex-direction: column;
       align-items: center;
 }
-.profile .p-1 .count div p:last-child{
+
+.profile .p-1 .count div p:last-child {
       font-weight: 600;
 
 }
+
 /* p-2 section */
-.profile .p-2{
+.profile .p-2 {
       margin-top: 30px;
 }
-.profile .p-2 ul{
+
+.profile .p-2 ul {
       padding: 30px 0;
 
 }
-.profile .p-2 ul li{
+
+.profile .p-2 ul li {
       display: flex;
       gap: 20px;
       font-size: 18px;
@@ -166,34 +185,39 @@ main .profile .p-1{
 }
 
 /* Repo Section */
-.r-1 article{
+.r-1 article {
       width: 95%;
       margin: auto;
 }
-.repo-item{
+
+.repo-item {
       display: flex;
       flex-direction: column;
       gap: 20px;
-      border: 1px solid rgba(0,0,0,.125);
+      border: 1px solid rgba(0, 0, 0, .125);
       width: 100%;
       padding: 20px;
       border-radius: 7px;
       margin-bottom: 20px;
 }
-.repo-item .repo-head{
+
+.repo-item .repo-head {
       display: flex;
       flex-direction: column;
       gap: 10px;
 }
-.repo-item .repo-icons ul{
+
+.repo-item .repo-icons ul {
       display: flex;
       gap: 20px;
 }
-.repo-item .repo-icons ul li{
+
+.repo-item .repo-icons ul li {
       display: flex;
       align-items: center;
       gap: 2px;
 }
+
 /* Section History */
 
 .history {
@@ -201,27 +225,33 @@ main .profile .p-1{
       background-color: #fff;
 
 }
-.s-3-body{
+
+.s-3-body {
       padding: 10px;
 
 }
-.s-3-body ul li,.s-3-footer{
+
+.s-3-body ul li,
+.s-3-footer {
       padding: 12px 20px;
       margin: 10px;
-      border: 1px solid rgba(0,0,0,.125);
+      border: 1px solid rgba(0, 0, 0, .125);
       display: flex;
       justify-content: space-between;
 }
-.s-3-body ul li ion-icon{
+
+.s-3-body ul li ion-icon {
       font-size: 22px;
       color: red;
 }
-.s-3-footer{
+
+.s-3-footer {
       display: flex;
       justify-content: end;
       border: none;
 }
-.s-3-footer .delete-all{
+
+.s-3-footer .delete-all {
       background-color: #dc3545;
       color: #fff;
       padding: 10px 20px;
@@ -231,7 +261,7 @@ main .profile .p-1{
 }
 
 /* Footer */
-footer{
+footer {
       padding: 10px;
       background-color: #23272B;
       color: #fff;
@@ -239,7 +269,8 @@ footer{
       width: 80%;
       margin-bottom: 100px;
 }
-footer a{
+
+footer a {
       color: #19ceea;
 }
 
