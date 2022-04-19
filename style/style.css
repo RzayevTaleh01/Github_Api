@@ -1,0 +1,268 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+a{
+      text-decoration: none;
+}
+button {
+      cursor: pointer;
+      border: none;
+}
+ul {
+      list-style: none;
+}
+
+body {
+      background-color: #F0F0F6;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin-top: 50px;
+      gap: 20px;
+}
+
+.container {
+      width: 80%;
+      margin: auto;
+}
+
+
+/* Header Section  */
+header {
+      background-color: #ffff;
+      padding: 10px 10px;
+      width: 80%;
+      box-shadow: 0 0 1px 0 rgb(0 0 0 / 10%),
+            0 0 1px 0 rgb(0 0 0 / 10%);
+      border-radius: 5px;
+
+}
+
+header article form {
+      display: flex;
+      justify-content: space-between;
+}
+
+header article form input[type="text"] {
+      border: none;
+      padding: 10px;
+      width: 90%;
+}
+
+header article form input[type="text"]:focus {
+      outline: none;
+}
+
+header article form button {
+      width: 10%;
+      border: none;
+      background-color: #23272B;
+      color: #fff;
+      border-radius: 5px;
+}
+
+/* Main Section */
+
+main {
+      display: flex;
+      gap: 20px;
+      width: 80%;
+      margin-bottom: 20px;
+}
+
+main aside {
+      background-color: #fff;
+      box-shadow: 0 0 1px 0 rgb(0 0 0 / 10%),
+            0 0 1px 0 rgb(0 0 0 / 10%);
+      border-radius: 5px;
+}
+
+main aside .info,.info {
+      width: 100%;
+      text-align: center;
+      background-color: #23272B;
+      color: #fff;
+      margin-bottom: 20px;
+      padding: 10px;
+
+}
+
+main .repos {
+      width: 60%;
+}
+.error-message{
+      background-color: #F8D7DA;
+      color:#721c24;
+      width: 100%;
+      padding: 10px;
+      margin-top: 20px;
+      border-radius: 5px;
+}
+.empty-repo{
+      text-align: center;
+      padding: 20px 0;
+}
+
+/* Profile Section */
+main .profile {
+      width: 40%;
+}
+main .profile .p-1{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 10px;
+}
+.profile .p-1 .img {
+      display: flex;
+      justify-content: center;
+}
+
+.profile .p-1 .img img {
+      width: 60%;
+      border-radius: 50%;
+}
+.profile .p-1 h1{
+      font-size: 28px;
+      font-weight: 500;
+}
+.profile .p-1>p{
+      font-size: 20px;
+      font-style: italic;
+      margin-bottom: 20px;
+}
+.profile .p-1 .count {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+}
+.profile .p-1 .count div{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+}
+.profile .p-1 .count div p:last-child{
+      font-weight: 600;
+
+}
+/* p-2 section */
+.profile .p-2{
+      margin-top: 30px;
+}
+.profile .p-2 ul{
+      padding: 30px 0;
+
+}
+.profile .p-2 ul li{
+      display: flex;
+      gap: 20px;
+      font-size: 18px;
+      padding: 5px;
+}
+
+/* Repo Section */
+.r-1 article{
+      width: 95%;
+      margin: auto;
+}
+.repo-item{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      border: 1px solid rgba(0,0,0,.125);
+      width: 100%;
+      padding: 20px;
+      border-radius: 7px;
+      margin-bottom: 20px;
+}
+.repo-item .repo-head{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+}
+.repo-item .repo-icons ul{
+      display: flex;
+      gap: 20px;
+}
+.repo-item .repo-icons ul li{
+      display: flex;
+      align-items: center;
+      gap: 2px;
+}
+/* Section History */
+
+.history {
+      width: 80%;
+      background-color: #fff;
+
+}
+.s-3-body{
+      padding: 10px;
+
+}
+.s-3-body ul li,.s-3-footer{
+      padding: 12px 20px;
+      margin: 10px;
+      border: 1px solid rgba(0,0,0,.125);
+      display: flex;
+      justify-content: space-between;
+}
+.s-3-body ul li ion-icon{
+      font-size: 22px;
+      color: red;
+}
+.s-3-footer{
+      display: flex;
+      justify-content: end;
+      border: none;
+}
+.s-3-footer .delete-all{
+      background-color: #dc3545;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      width: 150px;
+      font-size: 16px;
+}
+
+/* Footer */
+footer{
+      padding: 10px;
+      background-color: #23272B;
+      color: #fff;
+      text-align: center;
+      width: 80%;
+      margin-bottom: 100px;
+}
+footer a{
+      color: #19ceea;
+}
+
+@media (max-width: 900px) {
+
+      /* header section */
+      header article form button {
+            width: 30%;
+      }
+
+
+      /* main section */
+      main {
+            flex-direction: column;
+
+      }
+
+      main .profile {
+            width: 100%;
+      }
+
+      main .repos {
+            width: 100%;
+      }
+
+}
